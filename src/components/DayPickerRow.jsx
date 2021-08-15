@@ -7,6 +7,12 @@ import TimeSlots from "./TimeSlots";
 const DayPickerRow = ({ isDisabled, dayId, isOpen, label, handleChange }) => {
   const [selectValue, setSelectValue] = useState("");
   const { t } = useTranslation();
+  const defaultSlots =
+    selectValue === "9to5"
+      ? [9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+      : selectValue === "24hr"
+      ? Array.from(new Array(24)).map((_, int) => int)
+      : [];
   return (
     <tr className={classes.row}>
       <td>
@@ -24,10 +30,18 @@ const DayPickerRow = ({ isDisabled, dayId, isOpen, label, handleChange }) => {
           />
         </div>
       </td>
-      <td>
-        {isOpen && <TimePicker onChange={setSelectValue} value={selectValue} />}
-      </td>
-      <td>{selectValue === "custom" && <TimeSlots />}</td>
+      {isOpen ? (
+        <>
+          <td>
+            <TimePicker onChange={setSelectValue} value={selectValue} />
+          </td>
+          <td colSpan="3">
+            <TimeSlots defaultValue={defaultSlots} />
+          </td>
+        </>
+      ) : (
+        <td colSpan="2">{t("closed")}</td>
+      )}
     </tr>
   );
 };

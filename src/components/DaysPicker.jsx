@@ -52,6 +52,7 @@ const DaysPicker = ({ disabledDays = [] }) => {
           const isOpen = activeDays.includes(dayId);
           return (
             <DayPickerRow
+              key={idx}
               handleChange={handleChange}
               isDisabled={isDisabled}
               dayId={dayId}
