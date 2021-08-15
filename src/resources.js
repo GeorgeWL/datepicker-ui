@@ -8,7 +8,8 @@ const resources = {
       friday: "friday",
       saturday: "saturday",
       sunday: "sunday",
-      allDay: "Open 24 Hours",
+      "24hr": "Open 24 Hours",
+      "9to5": "9am to 5pm",
       timeSlot: "Time Slot",
       pleaseSelect: "Please Select"
     }
@@ -22,8 +23,9 @@ const resources = {
       thursday: "donnerstag",
       friday: "freitag",
       saturday: "samstag",
-      allDay: "24 Stunden geöffnet",
-      timeSlot: "DE: Time Slot",
+      "24hr": "24 Stunden geöffnet",
+      "9to5": "9 bis 17 Uhr",
+      custom: "Benutzerdefiniert",
       pleaseSelect: "DE: Please Select"
     }
   }
