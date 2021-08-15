@@ -1,0 +1,32 @@
+{
+  "name": "ui-stuff",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "classnames": "2.2.6",
+    "dayjs": "1.8.35",
+    "i18next": "19.7.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-i18next": "11.7.3",
+    "react-scripts": "3.4.3",
+    "sass": "1.26.10"
+  },
+  "devDependencies": {
+    "typescript": "3.8.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
